@@ -9,4 +9,5 @@ include("./helm_repos/Tiltfile")
 
 include("./kafka/Tiltfile")
 include("./postgres/Tiltfile")
+include("./etcd/Tiltfile")
 
