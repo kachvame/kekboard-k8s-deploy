@@ -8,4 +8,5 @@ namespace_create("kekboard")
 include("./helm_repos/Tiltfile")
 
 include("./kafka/Tiltfile")
+include("./postgres/Tiltfile")
 
