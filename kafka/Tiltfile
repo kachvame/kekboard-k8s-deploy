@@ -1,0 +1,10 @@
+load("ext://helm_resource", "helm_resource")
+
+helm_resource(
+    "kafka",
+    "bitnami/kafka",
+    namespace="kekboard",
+    flags=["--version=22.0.2"],
+    resource_deps=["bitnami"],
+)
+
