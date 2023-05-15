@@ -11,3 +11,5 @@ include("./kafka/Tiltfile")
 include("./postgres/Tiltfile")
 include("./etcd/Tiltfile")
 
+include("../gayway/Tiltfile")
+
