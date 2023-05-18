@@ -1,0 +1,21 @@
+load("ext://helm_resource", "helm_resource")
+load("ext://configmap", "configmap_create")
+
+configmap_create(
+    "kafka-ui",
+    namespace="kekboard",
+    from_file="config.yaml",
+)
+
+helm_resource(
+    "kafka-ui",
+    "kafka-ui-repo/kafka-ui",
+    namespace="kekboard",
+    flags=[
+        "--version=0.7.0",
+        "--set=yamlApplicationConfigConfigMap.name=kafka-ui",
+        "--set=yamlApplicationConfigConfigMap.keyName=config.yaml",
+    ],
+    resource_deps=["kafka", "kafka-ui-repo"],
+    port_forwards=["8080"],
+)

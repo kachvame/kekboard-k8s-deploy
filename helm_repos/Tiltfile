@@ -1,4 +1,4 @@
 load("ext://helm_resource", "helm_repo")
 
 helm_repo("bitnami", "https://charts.bitnami.com/bitnami")
-
+helm_repo("kafka-ui-repo", "https://provectus.github.io/kafka-ui")
