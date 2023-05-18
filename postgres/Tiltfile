@@ -20,5 +20,6 @@ helm_resource(
         "--set=global.postgresql.auth.existingSecret=postgres-creds",
     ],
     resource_deps=["bitnami"],
+    labels=["infra"],
 )
 

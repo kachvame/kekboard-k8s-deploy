@@ -18,4 +18,5 @@ helm_resource(
     ],
     resource_deps=["kafka", "kafka-ui-repo"],
     port_forwards=["8080"],
+    labels=["infra"],
 )
